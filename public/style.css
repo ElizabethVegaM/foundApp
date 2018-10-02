@@ -132,15 +132,16 @@ h1 {
   padding-bottom: 20px;
 }
 
-.options button {
+.options a {
   background: #4b9cdb;
   margin-bottom: 20px;
   padding: 15px;
   padding: 20px 0 10px;
   width: 60vw;
+  color: black;
 }
 
-.options button i {
+.optionsS i {
   font-size: 40px;
 }
 
