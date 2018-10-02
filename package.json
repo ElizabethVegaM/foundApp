@@ -1,0 +1,26 @@
+{
+  "name": "foundapp",
+  "version": "1.0.0",
+  "description": "app in conjunction with HERE",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mia5391/foundApp.git"
+  },
+  "keywords": [
+    "HERE",
+    "maps"
+  ],
+  "author": "MK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mia5391/foundApp/issues"
+  },
+  "homepage": "https://github.com/Mia5391/foundApp#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}
