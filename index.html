@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FoundApp</title>
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css?family=Courgette|Roboto:300,400,700" rel="stylesheet">
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Estilos Propios -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Pantalla de bienvenida -->
+  <div id="first" class="welcome-screen">
+    <div class="title">
+      <img id="bigLogo" src="img/Logo.png" alt="foundApp Logo">
+      <p>Identificando personas encontradas</p>
+      <div class="load-9">
+        <div class="spinner">
+          <div class="bubble-1"></div>
+          <div class="bubble-2"></div>
+        </div>
+      </div>
+    </div>
+    <img class="family" src="img/e02ed05e-50f2-4909-a6d4-74b786034f58.jpeg" alt="">
+  </div>
+
+  <!-- Página de Inicio -->
+  <div id="main">
+
+    <!-- Header -->
+    <header class="top">
+      <h1>Found</h1>
+      <button type="button"><i class="far fa-question-circle"></i></b>
+    </header>
+
+    <!-- Menú -->
+    <article class="options">
+      <h3>¿Qué deseas hacer?</h3>
+      <button type="button" class="btn"><i class="fas fa-search"></i><p>Buscar Persona</p></button>
+      <button type="button" class="btn"><i class="fas fa-user-plus"></i><p>Reportar Persona</p></button>
+    </article>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAb4Kxbgz4aIIawvrANcPQFCnF3ojhmVqg",
+    authDomain: "lab-found-app.firebaseapp.com",
+    databaseURL: "https://lab-found-app.firebaseio.com",
+    projectId: "lab-found-app",
+    storageBucket: "lab-found-app.appspot.com",
+    messagingSenderId: "595175612714"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="app.js"></script>
+<script src="indexMap.js"></script>
+</body>
+</html>
