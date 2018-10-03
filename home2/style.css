@@ -1,0 +1,42 @@
+/* Página de inicio */
+
+#main {
+  text-align: center;
+  height: 100vh;
+}
+
+.top {
+  height: 5vh;
+  padding: 10px 5px;
+}
+
+.top button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 25px;
+}
+
+.options {
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.options h3 {
+  padding-bottom: 20px;
+}
+
+.options a {
+  background: #4b9cdb;
+  margin-bottom: 20px;
+  padding: 15px;
+  padding: 20px 0 10px;
+  width: 60vw;
+  color: black;
+}
+
+.optionsS i {
+  font-size: 40px;
+}
