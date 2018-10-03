@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrar lo encontrado</title>
+      <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Roboto:300,400,700" rel="stylesheet">
+    <!-- Íconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+    <script src="js/register.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/register.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <header class="top">
+        <h1>Found</h1>
+        <button type="button"><i class="far fa-question-circle"></i></b>
+      </header>
+      <div class="navbar">
+          <a id="searchBtn" href="home.html" class="nav-link">Buscar</a>
+          <a id="registerBtn" href="register.html" class="nav-link">Informar</a>
+        </div>
+    </header>
+    <!-- Formulario de Registro -->
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <select class="select" id="tariff-select">
+            <option value="">Qué quieres registrar?</option>
+            <option value="Persona">Persona</option>
+            <option value="Objeto">Objeto</option>
+          <input type="Descripción" id="description" placeholder="Describe la persona o cosa que quieres registrar">
+          <br>
+          <h3>Información de Contacto:</h3>
+          <br>
+          <input type="name" name="name" value="Nombre" required>
+          <input type="teléfono" name="phone" value="teléfono" required>
+          <input type="email" name="email" value="correo (opcional)">
+          <input id="picOption" accept="image/*" class="photo" type="file" capture="camera">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
