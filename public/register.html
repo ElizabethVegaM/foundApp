@@ -134,7 +134,7 @@
 
           <!-- Registro de Objetos -->
           <div id="objectContainer" class="form-container">
-            <form id="objectForm" class="registerForm" onsubmit="addObject()">
+            <form id="objectForm" class="registerForm">
               <div class="form-group">
                 <label for="objectType">Tipo de Objeto</label>
                 <select class="form-control" id="objectType" required>
@@ -151,22 +151,22 @@
               </div>
               <!-- Foto -->
               <div id="ocameraIcon" class="form-group">
-                <label for="ophoto" class="cameraButton">
+                <label for="objectPhoto" class="cameraButton">
                   <i class="fas fa-camera"></i>
-                  <input id="ophoto" name="photo" accept="image/*" type="file" capture="camera">
-                  <p id="ophotoMessage"></p>
+                  <input id="objectPhoto" name="photo" accept="image/*" type="file" capture="camera">
+                  <p id="objectPhotoMessage"></p>
                 </label>
               </div>
               <!-- Datos de Contacto -->
               <p>Información de Contacto</p>
               <div class="form-row">
                 <div class="form-group dual col-md-6">
-                  <label for="ofinderName">Nombre</label>
-                  <input type="text" class="form-control" id="ofinderName" placeholder="Juan Pérez" required>
+                  <label for="objectFinder">Nombre</label>
+                  <input type="text" class="form-control" id="objectFinder" placeholder="Juan Pérez" required>
                 </div>
                 <div class="form-group dual col-md-6">
-                  <label for="oPhone">Teléfono</label>
-                  <input type="text" class="form-control" id="oPhone" placeholder="+569 12345678" required>
+                  <label for="objectPhone">Teléfono</label>
+                  <input type="text" class="form-control" id="objectPhone" placeholder="+569 12345678" required>
                 </div>
               </div>
               <button type="submit" class="btn">REGISTRAR</button>
