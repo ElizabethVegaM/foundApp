@@ -39,3 +39,13 @@ h1 {
   font-weight: 700;
   border-bottom: 1px solid #e37611;
 }
+
+/* Formulario de Registro */
+
+.form-container {
+  display: none;
+}
+
+.dual {
+  width: 50%;
+}

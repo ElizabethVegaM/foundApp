@@ -48,27 +48,11 @@ h1 {
 
 /* Information */
 
-.container-1,
 .filter {
   display: flex;
-  justify-content: space-around;
-}
-
-.filter {
+  margin: auto;
   padding: 10px;
-}
-
-.container-2 {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-
-}
-
-.container-2>p {
-  margin: 20px;
-  text-align: center;
-  line-height: 45px;
+  width: 50vw;
 }
 
 #typeFilter {
@@ -83,3 +67,30 @@ h1 {
 #typerFilter:hover {
   color: #e37611;
 }
+
+.container-2 {
+  padding: 15px 15px 0 15px;
+}
+
+.container-2>p {
+  margin: 20px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.result-entries {
+  border: 2px solid #e37611;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.result-entries img {
+  height: 100px;
+  width: 100px;
+}
+
+
+
