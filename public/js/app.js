@@ -10,5 +10,5 @@ function fadeout() {
 }
 
 function dissapear () {
-  location.href='../home/home.html';
+  location.href='home.html';
 }
