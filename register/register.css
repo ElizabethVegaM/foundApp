@@ -1,9 +1,3 @@
-
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #202020;
-}
-
 /* Header y Navbar */
 
 h1 {
@@ -40,46 +34,8 @@ h1 {
   width: 40%;
 }
 
-#searchBtn {
+#registerBtn {
   color: #202020;
   font-weight: 700;
   border-bottom: 1px solid #e37611;
-}
-
-/* Information */
-
-.container-1,
-.filter {
-  display: flex;
-  justify-content: space-around;
-}
-
-.filter {
-  padding: 10px;
-}
-
-.container-2 {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-
-}
-
-.container-2>p {
-  margin: 20px;
-  text-align: center;
-  line-height: 45px;
-}
-
-#typeFilter {
-  background: -webkit-linear-gradient(#f1d337, #e37611);
-  color: white;
-}
-
-#typeFilter option {
-  color: #202020;
-}
-
-#typerFilter:hover {
-  color: #e37611;
 }
