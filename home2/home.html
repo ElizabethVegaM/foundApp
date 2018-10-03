@@ -16,19 +16,20 @@
 </head>
 
 <body>
-  <!-- Pantalla de bienvenida -->
-  <div id="first" class="welcome-screen">
-    <div class="title">
-      <img id="bigLogo" src="../img/Logo.png" alt="foundApp Logo">
-      <p>Aquí va una frase</p>
-      <div class="load-9">
-        <div class="spinner">
-          <div class="bubble-1"></div>
-          <div class="bubble-2"></div>
-        </div>
-      </div>
-    </div>
-    <img class="family" src="../img/e02ed05e-50f2-4909-a6d4-74b786034f58.jpeg" alt="">
+  <!-- Página de Inicio -->
+  <div id="main">
+    <!-- Header -->
+    <header class="top">
+      <h1>Found</h1>
+      <button type="button"><i class="far fa-question-circle"></i></b>
+    </header>
+
+    <!-- Menú -->
+    <article class="options">
+      <h3>¿Qué deseas hacer?</h3>
+      <a href="../search/search.html" class="btn"><i class="fas fa-search"></i><p>Buscar Persona</p></a>
+      <a href="../register/registerPerson.html" class="btn"><i class="fas fa-user-plus"></i><p>Reportar Persona</p></a>
+    </article>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -51,3 +52,4 @@
 <script src="indexMap.js"></script>
 </body>
 </html>
+
