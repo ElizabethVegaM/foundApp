@@ -2,7 +2,7 @@
 const preload = document.getElementById('first');
 window.onload = function() {
   window.setTimeout(fadeout, 3000);
-  window.setTimeout(dissapear, 4000);
+  window.setTimeout(dissapear, 3500);
 }
 
 function fadeout() {
@@ -10,5 +10,5 @@ function fadeout() {
 }
 
 function dissapear () {
-  preload.style.display = 'none';
+  location.href='../home/home.html';
 }
