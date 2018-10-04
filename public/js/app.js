@@ -11,4 +11,6 @@ function fadeout() {
 
 function disappear () {
   location.href='home.html';
-}
+};
+
+module.exports=app
