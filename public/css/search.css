@@ -1,10 +1,21 @@
-.map {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-  }
 
-  .container-1, .filter {
+@media(min-width:468px){
+    #mapContainer {
+        width: 430px;
+        height: 400px;
+        background: grey;
+        
+    }
+}
+
+@media  (max-width: 600px) {
+    #mapContainer {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+.container-1, .filter {
     display: flex;
     justify-content: space-around;
     font-weight: bold;
@@ -30,5 +41,6 @@
 body {
     background-color: lightgray;
 }
+
 
 
