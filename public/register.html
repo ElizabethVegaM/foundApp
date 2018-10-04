@@ -32,8 +32,10 @@
       <div class="row">
         <div class="col-12">
           <h3>A quién o qué encontraste?</h3>
-          <button class="btn" onclick="showPersonForm()">Persona</button>
-          <button class="btn" onclick="showObjectForm()">Objeto</button>
+          <div class="options-container">
+            <button class="btn option-btn" onclick="showPersonForm()">Persona</button>
+            <button class="btn option-btn" onclick="showObjectForm()">Objeto</button>
+          </div>
 
           <!-- Registro de Personas -->
           <div id="personContainer" class="form-container">
@@ -121,14 +123,16 @@
                 </div>
               </div>
               <!-- Foto -->
-              <div id="personCameraIcon" class="form-group cam-icon">
-                <label for="personPhoto" class="cameraButton">
-                  <i class="fas fa-camera"></i>
+              <div id="personCameraIcon" class="cam-icon">
+                <label for="personPhoto">
+                  <i class="fas fa-camera"></i><span>Tomar fotografía</span>
                   <input id="personPhoto" name="photo" accept="image/*" type="file" capture="camera">
                   <p id="personPhotoMessage"></p>
                 </label>
               </div>
-              <button type="submit" class="btn">REGISTRAR</button>
+              <div class="submit-container">
+                <button type="submit" class="btn option-btn">REGISTRAR</button>
+              </div>
             </form>
           </div>
 
@@ -149,14 +153,6 @@
                 <label for="objectInfo">Catacterísticas del Objeto</label>
                 <textarea class="form-control" id="objectInfo" rows="3" placeholder="Realiza una descripción..." required></textarea>
               </div>
-              <!-- Foto -->
-              <div id="ocameraIcon" class="form-group">
-                <label for="objectPhoto" class="cameraButton">
-                  <i class="fas fa-camera"></i>
-                  <input id="objectPhoto" name="photo" accept="image/*" type="file" capture="camera">
-                  <p id="objectPhotoMessage"></p>
-                </label>
-              </div>
               <!-- Datos de Contacto -->
               <p>Información de Contacto</p>
               <div class="form-row">
@@ -169,7 +165,17 @@
                   <input type="text" class="form-control" id="objectPhone" placeholder="+569 12345678" required>
                 </div>
               </div>
-              <button type="submit" class="btn">REGISTRAR</button>
+              <!-- Foto -->
+              <div id="oCameraIcon" class="cam-icon">
+                <label for="objectPhoto">
+                  <i class="fas fa-camera"></i><span>Tomar fotografía</span>
+                  <input id="objectPhoto" name="photo" accept="image/*" type="file" capture="camera">
+                  <p id="objectPhotoMessage"></p>
+                </label>
+              </div>
+              <div class="submit-container">
+                <button type="submit" class="btn option-btn">REGISTRAR</button>
+              </div>
             </form>
           </div>
         </div>

@@ -41,8 +41,9 @@ document.getElementById('personForm').addEventListener('submit', (event) => {
     let finder = personFinder.value;
     let pPhone = personPhone.value;
 
-    const newUserKey = firebase.database().ref().child('foundPerson').push().key;
-    firebase.database().ref(`foundPerson/${newUserKey}`).set({
+    const newUserKey = firebase.database().ref().child('found').push().key;
+    firebase.database().ref(`found/${newUserKey}`).set({
+      option: person,
       name: pName,
       gender: pGender,
       age: pAge,
@@ -80,8 +81,9 @@ document.getElementById('objectForm').addEventListener('submit', (event) => {
     let oInfo = objectInfo.value;
     let oFinder = objectFinder.value;
     let oPhone = objectPhone.value;
-    const newUserKey = firebase.database().ref().child('foundObjects').push().key;
-    firebase.database().ref(`foundObjects/${newUserKey}`).set({
+    const newUserKey = firebase.database().ref().child('found').push().key;
+    firebase.database().ref(`found/${newUserKey}`).set({
+      option:object,
       type: oType,
       description: oInfo,
       finderName: oFinder,
