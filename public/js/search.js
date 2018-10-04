@@ -36,7 +36,7 @@ function updatePosition (event) {
   };
   console.log(coordinates);
   
-  var marker = new H.map.Marker(coordinates);
+  var marker = new H.map.Marker(coordinates); // añade marcador al mapa
   map.addObject(marker);
   map.setCenter(coordinates);
 }
