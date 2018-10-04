@@ -34,7 +34,6 @@ function updatePosition (event) {
     lat: event.coords.latitude,
     lng: event.coords.longitude
   };
-  console.log(coordinates);
 
   var marker = new H.map.Marker(coordinates);
   map.addObject(marker);

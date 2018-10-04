@@ -45,10 +45,10 @@
         <option value="2">Objetos</option>
       </select>
     </div>
-    <div class="results">
-      <div class="container-2">
+    <div id="entriesList" class="results"></div>
+      <!-- <div class="container-2">
         <div class="result-entries typePerson">
-          <img src="img/facebook-blank-face-blank-300x225-300x225-1.jpeg" alt=""> <!-- Foto -->
+          <img src="img/facebook-blank-face-blank-300x225-300x225-1.jpeg" alt=""> 
           <div>
             <p class="nombre">Nombre completo</p>
             <p class="sexo">Femenino</p>
@@ -58,12 +58,12 @@
             <p class="mts">1.6 -1.8 mts.</p>
             <p class="pelo">Cabello castaño</p>
           </div>
-          <h4>Nombre Contacto</h4> <!-- Nombre de quien publicó -->
+          <h4>Nombre Contacto</h4> 
         </div>
 
         <div class="result-entries typeObject">
-          <h4>Nombre Contacto</h4> <!-- Nombre de quien publicó -->
-          <img src="img/wallet.jpg" alt=""> <!-- Foto -->
+          <h4>Nombre Contacto</h4> 
+          <img src="img/wallet.jpg" alt=""> 
         </div>
 
         <p class="avatar"><i class="fas fa-user-circle fa-3x"></i></p>
@@ -76,8 +76,8 @@
           <p class="mts">1.6 -1.8 mts.</p>
           <p class="pelo">Cabello castaño</p>
         </div>
-      </div>
-    </div>
+      </div> -->
+
   </main>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -85,7 +85,21 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB7HPBkWvYlZpRizNk6O06G1xu6qcmC-iI",
+      authDomain: "registro-visitantes.firebaseapp.com",
+      databaseURL: "https://registro-visitantes.firebaseio.com",
+      projectId: "registro-visitantes",
+      storageBucket: "registro-visitantes.appspot.com",
+      messagingSenderId: "280699437997"
+    };
+    firebase.initializeApp(config);
+  </script>
   <script src="js/home.js"></script>
+  <script src="js/entries.js"></script>
 </body>
 
 </html>

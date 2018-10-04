@@ -19,7 +19,7 @@ const backToForm = () => {
 
 let photoURL;
 document.getElementById('personPhoto').addEventListener('change', function(event) {
-  let storageRef = firebase.storage().ref().child(`personPhoto/a${personPhone.value}.jpeg`);
+  let storageRef = firebase.storage().ref().child(`foundPhoto/a${personPhone.value}.jpeg`);
   let firstFile = event.target.files[0];
   storageRef.put(firstFile);
   storageRef.getDownloadURL().then(function(url) {
@@ -60,13 +60,14 @@ document.getElementById('personForm').addEventListener('submit', (event) => {
       description: pInfo,
       finderName: finder,
       finderPhone: pPhone,
+      photo: photoURL,
       latitude: latitude,
       longitude: longitude
     });
 
     newEntry.innerHTML = `<div class="entry-container">
       <div class="entry-photo">
-        <img src="img/facebook-blank-face-blank-300x225-300x225-1.jpeg" alt="">
+        <img src="${photoURL}" alt="">
       </div>
       <h4>${pGender}</h4>
       <p>${pInfo}</p>
@@ -102,7 +103,7 @@ document.getElementById('personForm').addEventListener('submit', (event) => {
 });
 
 document.getElementById('objectPhoto').addEventListener('change', function(event) {
-  let storageRef = firebase.storage().ref().child(`objectPhoto/a${personPhone.value}.jpeg`);
+  let storageRef = firebase.storage().ref().child(`foundPhoto/a${personPhone.value}.jpeg`);
   let firstFile = event.target.files[0];
   storageRef.put(firstFile);
   storageRef.getDownloadURL().then(function(url) {
@@ -134,13 +135,14 @@ document.getElementById('objectForm').addEventListener('submit', (event) => {
       description: oInfo,
       finderName: oFinder,
       finderphone: oPhone,
+      photo: photoURL,
       latitude: latitude,
       longitude: longitude
     });
 
     newEntry.innerHTML = `<div class="entry-container">
       <div class="entry-photo">
-        <img src="img/wallet.jpg" alt="">
+        <img src="${photoURL} alt="">
       </div>
       <h4>${oType}</h4>
       <div class="entryInfo">

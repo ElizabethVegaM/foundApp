@@ -57,8 +57,10 @@ h1 {
 }
 
 #typeFilter {
-  background: -webkit-linear-gradient(#f1d337, #e37611);
+  background: #e37611;
   color: white;
+  border-radius: 8px;
+  font-weight: 300;
 }
 
 #typeFilter option {
