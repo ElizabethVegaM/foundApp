@@ -37,7 +37,7 @@ function updatePosition (event) {
     lng: event.coords.longitude
   };
   console.log(HEREHQcoordinates);
-  
+
   var marker = new H.map.Marker(HEREHQcoordinates);
   map.addObject(marker);
   map.setCenter(HEREHQcoordinates);
@@ -45,3 +45,4 @@ function updatePosition (event) {
 // watchPosition devuelve la ubicación actual del usuario y actualiza la ubicación según el desplazamiento del usuario
 navigator.geolocation.watchPosition(updatePosition);
 
+module.exports=search
