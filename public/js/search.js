@@ -35,11 +35,12 @@ function updatePosition (event) {
     lng: event.coords.longitude
   };
   console.log(coordinates);
-  
-  var marker = new H.map.Marker(coordinates); // añade marcador al mapa
+
+  var marker = new H.map.Marker(coordinates);
   map.addObject(marker);
   map.setCenter(coordinates);
 }
 // watchPosition devuelve la ubicación actual del usuario y actualiza la ubicación según el desplazamiento del usuario
 navigator.geolocation.watchPosition(updatePosition);
 
+module.exports=search

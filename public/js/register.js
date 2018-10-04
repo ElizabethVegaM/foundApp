@@ -1,13 +1,13 @@
-window.onload = () => {
-
-}
-
 const showPersonForm = () => {
+  personOption.setAttribute('class', 'selected-option btn');
+  objectOption.setAttribute('class', 'option-btn btn');
   objectContainer.style.display = 'none';
   personContainer.style.display = 'block';
 }
 
 const showObjectForm = () => {
+  objectOption.setAttribute('class', 'selected-option btn');
+  personOption.setAttribute('class', 'option-btn btn');
   personContainer.style.display = 'none';
   objectContainer.style.display = 'block';
 }
