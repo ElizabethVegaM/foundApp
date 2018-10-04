@@ -94,4 +94,4 @@ document.getElementById('objectForm').addEventListener('submit', (event) => {
   })
 });
 
-
+module.exports=register
