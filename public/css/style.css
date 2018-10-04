@@ -1,0 +1,126 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Courgette', cursive;
+}
+
+/* Pantalla de inicio */
+
+.welcome-screen {
+  background: #f1d337;
+  background: -moz-linear-gradient(top, rgba(241,211,55,1) 0%, rgba(234,167,37,1) 47%, rgba(233,158,33,1) 57%, rgba(227,118,17,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241,211,55,1)), color-stop(47%, #eaa725), color-stop(57%, rgba(233,158,33,1)), color-stop(100%, rgba(227,118,17,1)));
+  background: -webkit-linear-gradient(top, rgba(241,211,55,1) 0%, rgba(234,167,37,1) 47%, rgba(233,158,33,1) 57%, #e37611 100%);
+  background: -o-linear-gradient(top, rgba(241,211,55,1) 0%, rgba(234,167,37,1) 47%, rgba(233,158,33,1) 57%, rgba(227,118,17,1) 100%);
+  background: -ms-linear-gradient(top, rgba(241,211,55,1) 0%, rgba(234,167,37,1) 47%, rgba(233,158,33,1) 57%, rgba(227,118,17,1) 100%);
+  background: linear-gradient(to bottom, rgba(241,211,55,1) 0%, rgba(234,167,37,1) 47%, rgba(233,158,33,1) 57%, rgba(227,118,17,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1d337', endColorstr='#e37611', GradientType=0 );
+  font-weight: 300;
+  color: white;
+  padding: 30px;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  position: absolute;
+  z-index: 1000;
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+.title {
+  padding-bottom: 50px;
+}
+
+#bigLogo {
+  padding-top: 6rem;
+  width: 100%;
+}
+
+.welcome-screen p {
+  margin: 0;
+}
+
+.load-9 {
+  margin-top: 20px;
+}
+
+.spinner {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+}
+
+.bubble-1,
+.bubble-2 {
+  position: absolute;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #f7f7f7;
+}
+
+.bubble-2 {
+  top: auto;
+  bottom: 0;
+}
+
+.l-9 {animation-delay: 1.44s;}
+
+.load-9 .spinner {animation: loadingI 2s linear infinite;}
+.load-9 .bubble-1, .load-9 .bubble-2 {animation: bounce 2s ease-in-out infinite;}
+.load-9 .bubble-2 {animation-delay: -1.0s;}
+
+@keyframes loadingI {
+  100% {transform: rotate(360deg);}
+}
+
+@keyframes bounce  {
+  0%, 100% {transform: scale(0.0);}
+  50% {transform: scale(1.0);}
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.family {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* Device = Low Resolution Tablets, Mobiles (Landscape) */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Device = Tablets, Ipads (portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* Device = Laptops, Desktops */
+@media (min-width: 1025px) {
+
+}
