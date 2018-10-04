@@ -56,7 +56,7 @@ h4 {
   background: white;
   color: #e37611;
   font-weight: 300;
-  width: 40%;
+  width: 45%;
   border-radius: 8px;
 }
 
@@ -64,7 +64,7 @@ h4 {
   background: #e37611;
   color: white;
   font-weight: 700;
-  width: 40%;
+  width: 45%;
   border-radius: 8px;
 }
 
@@ -100,6 +100,7 @@ h4 {
 
 .cam-icon {
   color: #e37611;
+  padding-top: 15px;
 }
 
 .cam-icon input {
@@ -138,14 +139,22 @@ textarea, select, input {
   border-radius: 5px 0 0 5px;
 }
 
+.input-group-prepend {
+  width: 100%;
+}
+
 #objectPhone, #personPhone {
   border-radius: 0px 5px 5px 0px;
 }
 
-.submit-container i {
+.submit-container a {
   margin-right: 30px;
 }
 
-.submit-container a {
-  margin-right: 30px;
+.submit-container button {
+  width: 40%;
+}
+
+.submit-container span {
+  margin: 0;
 }
