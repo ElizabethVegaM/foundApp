@@ -28,7 +28,7 @@
         </div>
     </header>
     <!-- Formulario de Registro -->
-    <div class="container-fluid">
+    <div id="forms" class="container-fluid">
       <div class="row">
         <div class="col-12">
           <h4>¿A quién o qué encontraste?</h4>
@@ -44,8 +44,8 @@
                 <div class="form-group">
                   <label for="gender">Ingresa género</label>
                   <select class="form-control" id="gender" required>
-                    <option>Femenino</option>
-                    <option>Masculino</option>
+                    <option>Mujer</option>
+                    <option>Hombre</option>
                     <option>Indefinido</option>
                   </select>
                 </div>
@@ -112,7 +112,7 @@
                   <label for="personPhone">Teléfono</label>
                   <div class="input-group-prepend">
                     <span class="number-span" id="basic-addon1">+569</span>
-                    <input type="text" class="form-control" id="personPhone" placeholder="12345678" required>
+                    <input type="number" class="form-control" id="personPhone" placeholder="12345678" required>
                   </div>
                 </div>
                 <!-- Foto -->
@@ -158,7 +158,7 @@
                   <label for="objectPhone">Teléfono</label>
                   <div class="input-group-prepend">
                     <span class="number-span" id="basic-addon1">+569</span>
-                    <input type="text" class="form-control" id="objectPhone" placeholder="12345678" required="">
+                    <input type="number" class="form-control" id="objectPhone" placeholder="12345678" required="">
                   </div>
               </div>
               <!-- Foto -->
@@ -171,13 +171,16 @@
               </div>
               <div class="submit-container">
                 <a href="home.html" class="btn option-btn"><span><i class="fas fa-caret-left"></i></span> Volver</a>
-                <button type="submit" class="btn selected-option">Continuar <span><i class="fas fa-caret-right"></i></span></button>
+                <a type="submit" class="btn selected-option">Continuar <span><i class="fas fa-caret-right"></i></span></a>
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Ficha desplegada -->
+    <div id="newEntry"></div>
 
     <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
     <script>

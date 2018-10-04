@@ -158,3 +158,36 @@ textarea, select, input {
 .submit-container span {
   margin: 0;
 }
+
+/* Ficha */
+
+#newEntry {
+  height: 95vh;
+  padding: 15px;
+}
+
+.entry-container {
+  height: 100%;
+  color: #202020;
+}
+
+.entry-photo {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background: #adadad;
+  text-align: center;
+}
+
+.entry-photo img {
+  height: 100%;
+}
+
+.entry-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-title {
+  color: #e37611;
+}
