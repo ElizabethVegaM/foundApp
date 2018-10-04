@@ -13,7 +13,6 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous">
-    <script src="js/register.js" charset="utf-8"></script>
     <link rel="stylesheet" href="css/register.css">
   </head>
   <body>
@@ -29,23 +28,173 @@
         </div>
     </header>
     <!-- Formulario de Registro -->
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="column">
-          <select class="select" id="tariff-select">
-            <option value="">Qué quieres registrar?</option>
-            <option value="Persona">Persona</option>
-            <option value="Objeto">Objeto</option>
-          <input type="Descripción" id="description" placeholder="Describe la persona o cosa que quieres registrar">
-          <br>
-          <h3>Información de Contacto:</h3>
-          <br>
-          <input type="name" name="name" value="Nombre" required>
-          <input type="teléfono" name="phone" value="teléfono" required>
-          <input type="email" name="email" value="correo (opcional)">
-          <input id="picOption" accept="image/*" class="photo" type="file" capture="camera">
+        <div class="col-12">
+          <h3>A quién o qué encontraste?</h3>
+          <div class="options-container">
+            <button class="btn option-btn" onclick="showPersonForm()">Persona</button>
+            <button class="btn option-btn" onclick="showObjectForm()">Objeto</button>
+          </div>
+
+          <!-- Registro de Personas -->
+          <div id="personContainer" class="form-container">
+            <form id="personForm" class="registerForm">
+              <!-- Nombre -->
+              <div class="form-group">
+                <input type="text" class="form-control" id="foundName" placeholder="Nombre (sólo si lo conoce)">
+              </div>
+              <!-- Género -->
+              <div class="form-group dual">
+                <label for="gender">Género</label>
+                <select class="form-control" id="gender" required>
+                  <option>Femenino</option>
+                  <option>Masculino</option>
+                  <option>Intersex</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <!-- Edad aprox -->
+                <div class="form-group dual col-md-6">
+                  <label for="age">Edad (aprox)</label>
+                  <select class="form-control" id="age" require >
+                    <option>0 - 10</option>
+                    <option>11 - 20</option>
+                    <option>21 - 30</option>
+                    <option>31 - 40</option>
+                    <option>41 - 50</option>
+                    <option>51 - 60</option>
+                    <option>60 +</option>
+                  </select>
+                </div>
+                <!-- Altura -->
+                <div class="form-group dual col-md-6">
+                  <label for="personHeight">Altura (aprox)</label>
+                  <select class="form-control" id="personHeight" required>
+                    <option>- 1.2 <span>m</span></option>
+                    <option>1.2 - 1.4 <span>m</span></option>
+                    <option>1.4 - 1.6 <span>m</span></option>
+                    <option>1.6 - 1.8 <span>m</span></option>
+                    <option>1.8 + <span>m</span></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <!-- Color de Pelo -->
+                <div class="form-group dual col-md-6">
+                  <label for="hair">Color de Pelo</label>
+                  <select class="form-control" id="hair" required>
+                    <option>Negro</option>
+                    <option>Castaño</option>
+                    <option>Rubio</option>
+                    <option>Gris</option>
+                    <option>Pelirrojo</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+                <!-- Color de Ojos -->
+                <div class="form-group dual col-md-6">
+                  <label for="eye">Color de Ojos</label>
+                  <select class="form-control" id="eye" required>
+                    <option>Negros</option>
+                    <option>Cafés</option>
+                    <option>Verdes</option>
+                    <option>Azules</option>
+                    <option>Grises</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Adicional -->
+              <div class="form-group">
+                <label for="extraInfo">¿Posees información adicional?</label>
+                <textarea class="form-control" id="extraInfo" rows="3" placeholder="Vestimenta, cicatrices, tatuajes, etc." required></textarea>
+              </div>
+              <!-- Datos de Contacto -->
+              <p>Información de Contacto</p>
+              <div class="form-row">
+                <div class="form-group dual col-md-6">
+                  <label for="personfinder">Nombre</label>
+                  <input type="text" class="form-control" id="personFinder" placeholder="Juan Pérez" required>
+                </div>
+                <div class="form-group dual col-md-6">
+                  <label for="personPhone">Teléfono</label>
+                  <input type="text" class="form-control" id="personPhone" placeholder="+569 12345678" required>
+                </div>
+              </div>
+              <!-- Foto -->
+              <div id="personCameraIcon" class="cam-icon">
+                <label for="personPhoto">
+                  <i class="fas fa-camera"></i><span>Tomar fotografía</span>
+                  <input id="personPhoto" name="photo" accept="image/*" type="file" capture="camera">
+                  <p id="personPhotoMessage"></p>
+                </label>
+              </div>
+              <div class="submit-container">
+                <button type="submit" class="btn option-btn">REGISTRAR</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Registro de Objetos -->
+          <div id="objectContainer" class="form-container">
+            <form id="objectForm" class="registerForm">
+              <div class="form-group">
+                <label for="objectType">Tipo de Objeto</label>
+                <select class="form-control" id="objectType" required>
+                  <option>Documentos</option>
+                  <option>Teléfonos, notebook, etc.</option>
+                  <option>Ropa</option>
+                  <option>Bolsos, mochilas, maletas, etc</option>
+                  <option>Otros</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="objectInfo">Catacterísticas del Objeto</label>
+                <textarea class="form-control" id="objectInfo" rows="3" placeholder="Realiza una descripción..." required></textarea>
+              </div>
+              <!-- Datos de Contacto -->
+              <p>Información de Contacto</p>
+              <div class="form-row">
+                <div class="form-group dual col-md-6">
+                  <label for="objectFinder">Nombre</label>
+                  <input type="text" class="form-control" id="objectFinder" placeholder="Juan Pérez" required>
+                </div>
+                <div class="form-group dual col-md-6">
+                  <label for="objectPhone">Teléfono</label>
+                  <input type="text" class="form-control" id="objectPhone" placeholder="+569 12345678" required>
+                </div>
+              </div>
+              <!-- Foto -->
+              <div id="oCameraIcon" class="cam-icon">
+                <label for="objectPhoto">
+                  <i class="fas fa-camera"></i><span>Tomar fotografía</span>
+                  <input id="objectPhoto" name="photo" accept="image/*" type="file" capture="camera">
+                  <p id="objectPhotoMessage"></p>
+                </label>
+              </div>
+              <div class="submit-container">
+                <button type="submit" class="btn option-btn">REGISTRAR</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAb4Kxbgz4aIIawvrANcPQFCnF3ojhmVqg",
+      authDomain: "lab-found-app.firebaseapp.com",
+      databaseURL: "https://lab-found-app.firebaseio.com",
+      projectId: "lab-found-app",
+      storageBucket: "lab-found-app.appspot.com",
+      messagingSenderId: "595175612714"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="js/register.js" charset="utf-8"></script>
   </body>
 </html>
