@@ -26,21 +26,19 @@ let map = new H.Map(
   defaultLayers.normal.map,
   mapOptions
 );
-let behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
-
-let HEREHQcoordinates;
+let behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map)); // le da interactividad al mapa
 
 //acá se actualizan las coordenadas
 function updatePosition (event) {
-  HEREHQcoordinates = {
+  coordinates = {
     lat: event.coords.latitude,
     lng: event.coords.longitude
   };
-  console.log(HEREHQcoordinates);
+  console.log(coordinates);
 
-  var marker = new H.map.Marker(HEREHQcoordinates);
+  var marker = new H.map.Marker(coordinates);
   map.addObject(marker);
-  map.setCenter(HEREHQcoordinates);
+  map.setCenter(coordinates);
 }
 // watchPosition devuelve la ubicación actual del usuario y actualiza la ubicación según el desplazamiento del usuario
 navigator.geolocation.watchPosition(updatePosition);
